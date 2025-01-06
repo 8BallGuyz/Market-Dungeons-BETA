@@ -2276,9 +2276,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2628a31f051523c40adf345af2cb5e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  defaultSpeed: 5
+  sprintSpeed: 7
   rb: {fileID: 1826305025}
   movement: {x: 0, y: 0}
+  keyInput: 304
 --- !u!70 &1826305024
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
