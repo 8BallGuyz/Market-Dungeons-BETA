@@ -23,7 +23,7 @@ public class RoomSpawner : MonoBehaviour
     {
         if (spawned == false)
         {
-            if(roomDirection == 1)
+            if (roomDirection == 1)
             {
                 RandomSpawn = Random.Range(0, roomManager.bottomRoom.Length);
                 Instantiate(roomManager.bottomRoom[RandomSpawn], transform.position, Quaternion.identity);
