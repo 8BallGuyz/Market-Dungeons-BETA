@@ -16,7 +16,7 @@ public class bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("wall"))
+        if (collision.CompareTag("wall") || collision.CompareTag("deco"))
         {
             Destroy(gameObject);
         }

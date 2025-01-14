@@ -9,6 +9,7 @@ TagManager:
   - RoomPrefab
   - SpawnCollider
   - wall
+  - deco
   layers:
   - Default
   - TransparentFX
