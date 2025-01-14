@@ -430,7 +430,6 @@ GameObject:
   - component: {fileID: 1826305025}
   - component: {fileID: 1826305024}
   - component: {fileID: 1826305023}
-  - component: {fileID: 1826305026}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -589,18 +588,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1826305026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1826305020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b9ec2abf3003814ca4977c3ce13a476, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &77412205807943129 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3711586965126309683, guid: 6fea4efc66b637b42b61eebb64943056, type: 3}
@@ -737,7 +724,54 @@ MonoBehaviour:
   bulletprefab: {fileID: 2556649152218601322, guid: a28e2188340b02043a9697b28a906bb9, type: 3}
   firepoint: {fileID: 77412205807943129}
   bulletSpeed: 20
+  bulletDMG: 2
   cam: {fileID: 519420031}
+  timer: 0
+  cooldown: 0.25
+--- !u!114 &1045595988682034016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045595988682034011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b9ec2abf3003814ca4977c3ce13a476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletprefab: {fileID: 2556649152218601322, guid: a28e2188340b02043a9697b28a906bb9, type: 3}
+  firepoint: {fileID: 77412205807943129}
+  cam: {fileID: 519420031}
+  ActiveAbilityTimer: 0
+  bulletSpeedDefault: 20
+  bulletSpeed: 20
+  bulletBuff: 30
+  bulletDMG: 0.5
+  timer: 0
+  cooldown: 0.15
+  buffcooldown: 0.1
+  defaultcooldown: 0.15
+  timer2: 0
+  cooldown2: 30
+  timer3: 0
+  cooldown3: 10
+--- !u!114 &1045595988682034017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045595988682034011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b900a98fc57576a449dabaf792a43be6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AR: {fileID: 1045595988682034016}
+  Pistol: {fileID: 1045595988682034015}
+  KeyBindAR: 120
+  KeyBindSniper: 99
 --- !u!1001 &7252677765068781514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -814,6 +848,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8295112136338030160, guid: 6fea4efc66b637b42b61eebb64943056, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1045595988682034015}
+    - targetCorrespondingSourceObject: {fileID: 8295112136338030160, guid: 6fea4efc66b637b42b61eebb64943056, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1045595988682034016}
+    - targetCorrespondingSourceObject: {fileID: 8295112136338030160, guid: 6fea4efc66b637b42b61eebb64943056, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1045595988682034017}
   m_SourcePrefab: {fileID: 100100000, guid: 6fea4efc66b637b42b61eebb64943056, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

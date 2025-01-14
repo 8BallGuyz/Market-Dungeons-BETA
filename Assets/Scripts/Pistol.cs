@@ -6,10 +6,14 @@ public class Pistol : MonoBehaviour
     public Transform firepoint;
 
     public float bulletSpeed;
+    public float bulletDMG;
 
     Vector2 mousePosition;
 
     public Camera cam;
+
+    public float timer = 0;
+    public float cooldown = 0.5f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,11 +21,17 @@ public class Pistol : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        timer = timer + Time.deltaTime;
+
+        if (timer >= cooldown)
         {
-            Shoot();
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                Shoot();
+                timer = 0;
+            }
         }
     }
 
