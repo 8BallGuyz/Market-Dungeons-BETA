@@ -10,9 +10,7 @@ public class AR : MonoBehaviour
     public bool ActiveAbilityTimer = false;
 
     [Header("Bullet Stats")]
-    public float bulletSpeedDefault;
     public float bulletSpeed;
-    public float bulletBuff;
     public float bulletDMG;
 
     Vector2 mousePosition;
@@ -56,7 +54,6 @@ public class AR : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Mouse1))
             {
                 timer2 = 0;
-                bulletSpeed = bulletBuff;
                 ActiveAbilityTimer = true;
             }
         }
@@ -68,7 +65,6 @@ public class AR : MonoBehaviour
 
             if (timer3 >= cooldown3)
             {
-                bulletSpeed = bulletSpeedDefault;
                 timer3 = 0;
                 timer2 = 0;
                 ActiveAbilityTimer = false;
