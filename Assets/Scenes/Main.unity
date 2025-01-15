@@ -434,6 +434,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &876962632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 876962633}
+  - component: {fileID: 876962635}
+  - component: {fileID: 876962634}
+  m_Layer: 5
+  m_Name: Ability Timer AR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &876962633
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876962632}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2125955016}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 204.47, y: 33.8}
+  m_SizeDelta: {x: 62.3, y: 51.1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &876962634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876962632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 845276f1d85c16049a2deb74260c6a34, type: 3}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 156
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: '0
+
+'
+--- !u!222 &876962635
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876962632}
+  m_CullTransparentMesh: 1
 --- !u!1 &975082131
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,7 +589,7 @@ GameObject:
   - component: {fileID: 1426277736}
   - component: {fileID: 1426277735}
   m_Layer: 5
-  m_Name: Ability Timer
+  m_Name: Ability Timer Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -778,7 +859,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pistol: {fileID: 1045595988682034015}
-  Cooldown: {fileID: 1426277735}
+  AR: {fileID: 1045595988682034016}
+  PistolCooldown: {fileID: 1426277735}
+  ARCooldown: {fileID: 876962634}
 --- !u!4 &2065750892
 Transform:
   m_ObjectHideFlags: 0
@@ -826,6 +909,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1426277737}
+  - {fileID: 876962633}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1063,14 +1147,16 @@ MonoBehaviour:
   firepoint: {fileID: 77412205807943129}
   cam: {fileID: 519420031}
   ActiveAbilityTimer: 0
+  AbilityTimer: 0
+  Timer2Checker: 0
   bulletSpeed: 15
   bulletDMG: 0.5
   timer: 0
-  cooldown: 0.15
+  cooldown: 0.2
   buffcooldown: 0.1
-  defaultcooldown: 0.15
+  defaultcooldown: 0.2
   timer2: 0
-  cooldown2: 30
+  cooldown2: 15
   timer3: 0
   cooldown3: 10
 --- !u!114 &1045595988682034017

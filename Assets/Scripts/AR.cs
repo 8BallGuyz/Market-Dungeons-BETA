@@ -8,6 +8,8 @@ public class AR : MonoBehaviour
     public Camera cam;
 
     public bool ActiveAbilityTimer = false;
+    public bool AbilityTimer = false;
+    public bool Timer2Checker = false;
 
     [Header("Bullet Stats")]
     public float bulletSpeed;
@@ -37,8 +39,21 @@ public class AR : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        timer = timer + Time.deltaTime;
-        timer2 = timer2 + Time.deltaTime;
+        timer = timer + Time.deltaTime; // NormalShooting Cooldown
+
+        if (ActiveAbilityTimer == false)
+        {
+            Timer2Checker = true;
+        }
+        else if (ActiveAbilityTimer == true)
+        {
+            timer2 = 0;
+        }
+
+        if (Timer2Checker && timer2 < cooldown2) // Increment cooldown only if timer2 is below the max
+        {
+            timer2 += Time.deltaTime; // Progress ability cooldown
+        }
 
         if (timer >= cooldown)
         {
@@ -49,26 +64,34 @@ public class AR : MonoBehaviour
             }
         }
 
-        if(timer2 >= cooldown2)
+        if (timer2 >= cooldown2) // If cooldown is complete
         {
-            if(Input.GetKeyDown(KeyCode.Mouse1))
+            timer2 = cooldown2; // Ensure timer2 stays at max value until right-click
+            if (Input.GetKeyDown(KeyCode.Mouse1)) // Right-click to activate ability
             {
-                timer2 = 0;
+                timer2 = 0; // Reset cooldown timer
                 ActiveAbilityTimer = true;
+                AbilityTimer = true;
             }
+            //when the 2nd timer is equal or higher than the ability cooldown AND the right mouse has been clicked
+            //sets the 2nd timer back to 0 and activates the Current Ability timer and the Ability Timer 
         }
 
-        if (ActiveAbilityTimer)
+        if (ActiveAbilityTimer) //when this is true it will start the Active Ability Timer
         {
-            timer3 = timer3 + Time.deltaTime;
-            cooldown = buffcooldown;
+            timer3 = timer3 + Time.deltaTime; //timer for the current ability
+            cooldown = buffcooldown; //stat debuff for the shooting cooldown to be slower
 
-            if (timer3 >= cooldown3)
+            if (timer3 >= cooldown3) //when the current ability timer has ran out
             {
                 timer3 = 0;
                 timer2 = 0;
+                // sets both the Cooldown and Current timers to 0
                 ActiveAbilityTimer = false;
+                AbilityTimer = false;
+                // sets both bools to false
                 cooldown = defaultcooldown;
+                // stats goes back to normal (aka Default)
             }
         }
 
