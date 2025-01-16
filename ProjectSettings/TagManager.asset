@@ -10,6 +10,7 @@ TagManager:
   - SpawnCollider
   - wall
   - deco
+  - player
   layers:
   - Default
   - TransparentFX
