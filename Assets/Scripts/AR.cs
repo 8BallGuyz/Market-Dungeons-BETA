@@ -9,7 +9,7 @@ public class AR : MonoBehaviour
 
     public bool ActiveAbilityTimer = false;
     public bool AbilityTimer = false;
-    public bool Timer2Checker = false;
+    private bool Timer2Checker = false;
 
     [Header("Bullet Stats")]
     public float bulletSpeed;
@@ -39,7 +39,7 @@ public class AR : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        timer = timer + Time.deltaTime; // NormalShooting Cooldown
+        timer = timer + Time.deltaTime; // Normal Shooting Cooldown
 
         if (ActiveAbilityTimer == false)
         {
