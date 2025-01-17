@@ -94,7 +94,6 @@ public class AR : MonoBehaviour
                 // stats goes back to normal (aka Default)
             }
         }
-
     }
 
     void Shoot()

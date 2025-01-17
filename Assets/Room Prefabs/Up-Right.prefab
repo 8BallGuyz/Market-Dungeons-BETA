@@ -6306,6 +6306,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right-Door
       objectReference: {fileID: 0}
+    - target: {fileID: 3611072219874146166, guid: 1af22cb2963d50c43b8dcfe72bc36886, type: 3}
+      propertyPath: m_TagString
+      value: door
+      objectReference: {fileID: 0}
     - target: {fileID: 8431486345469116439, guid: 1af22cb2963d50c43b8dcfe72bc36886, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -6313,11 +6317,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3611072219874146166, guid: 1af22cb2963d50c43b8dcfe72bc36886, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2154700124293758163}
   m_SourcePrefab: {fileID: 100100000, guid: 1af22cb2963d50c43b8dcfe72bc36886, type: 3}
+--- !u!1 &108173183999125371 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3611072219874146166, guid: 1af22cb2963d50c43b8dcfe72bc36886, type: 3}
+  m_PrefabInstance: {fileID: 3719223413292437517}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2154700124293758163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108173183999125371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a8bf7ba2f810e46951cd14b31ae152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOpen: 1
+  timer: 0
+  delay: 1
+  cd: {fileID: 5089065199309344794}
+  sr: {fileID: 0}
+  doors: {fileID: 0}
 --- !u!4 &2016867570067196411 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2909342555076352502, guid: 1af22cb2963d50c43b8dcfe72bc36886, type: 3}
+  m_PrefabInstance: {fileID: 3719223413292437517}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &5089065199309344794 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 8431486345469116439, guid: 1af22cb2963d50c43b8dcfe72bc36886, type: 3}
   m_PrefabInstance: {fileID: 3719223413292437517}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4519417856983181880
@@ -6376,13 +6411,48 @@ PrefabInstance:
       propertyPath: m_Name
       value: Up-Door
       objectReference: {fileID: 0}
+    - target: {fileID: 6012055294004672862, guid: 935fa28fbdeb9dc4490dcdfe797cb8c2, type: 3}
+      propertyPath: m_TagString
+      value: door
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6012055294004672862, guid: 935fa28fbdeb9dc4490dcdfe797cb8c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4465017269209223273}
   m_SourcePrefab: {fileID: 100100000, guid: 935fa28fbdeb9dc4490dcdfe797cb8c2, type: 3}
+--- !u!61 &230371126442428703 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4434431314523956007, guid: 935fa28fbdeb9dc4490dcdfe797cb8c2, type: 3}
+  m_PrefabInstance: {fileID: 4519417856983181880}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7836482854482706514 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5942769339532552810, guid: 935fa28fbdeb9dc4490dcdfe797cb8c2, type: 3}
   m_PrefabInstance: {fileID: 4519417856983181880}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7914846510065226598 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6012055294004672862, guid: 935fa28fbdeb9dc4490dcdfe797cb8c2, type: 3}
+  m_PrefabInstance: {fileID: 4519417856983181880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4465017269209223273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7914846510065226598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a8bf7ba2f810e46951cd14b31ae152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOpen: 1
+  timer: 0
+  delay: 1
+  cd: {fileID: 230371126442428703}
+  sr: {fileID: 0}
+  doors: {fileID: 0}

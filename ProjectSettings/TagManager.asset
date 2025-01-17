@@ -12,6 +12,7 @@ TagManager:
   - deco
   - player
   - Down-Trigger
+  - door
   layers:
   - Default
   - TransparentFX
