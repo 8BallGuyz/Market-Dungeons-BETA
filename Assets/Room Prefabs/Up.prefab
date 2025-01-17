@@ -6176,6 +6176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1143065956263352093}
   - component: {fileID: 3787446282244697152}
+  - component: {fileID: 6598347806423676716}
   m_Layer: 0
   m_Name: Up
   m_TagString: RoomPrefab
@@ -6215,6 +6216,18 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &6598347806423676716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7904246832278088983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282fba038afeeb44f9cce57d012cced5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6174746037881512575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6304,11 +6317,15 @@ MonoBehaviour:
   timer: 0
   delay: 1
   cd: {fileID: 7510694691600073048}
-  sr: {fileID: 0}
-  doors: {fileID: 0}
+  sr: {fileID: 3158554942611024801}
 --- !u!4 &561243460083255317 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5942769339532552810, guid: 935fa28fbdeb9dc4490dcdfe797cb8c2, type: 3}
+  m_PrefabInstance: {fileID: 6174746037881512575}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &3158554942611024801 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9107521110165932510, guid: 935fa28fbdeb9dc4490dcdfe797cb8c2, type: 3}
   m_PrefabInstance: {fileID: 6174746037881512575}
   m_PrefabAsset: {fileID: 0}
 --- !u!61 &7510694691600073048 stripped

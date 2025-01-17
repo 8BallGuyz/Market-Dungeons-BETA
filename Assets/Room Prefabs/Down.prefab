@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 609040984456809622}
   - component: {fileID: 3354719976825820527}
+  - component: {fileID: 6736707058581535539}
   m_Layer: 0
   m_Name: Down
   m_TagString: Untagged
@@ -49,6 +50,18 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &6736707058581535539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2858847302332382142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282fba038afeeb44f9cce57d012cced5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5917410400876733551
 GameObject:
   m_ObjectHideFlags: 0
@@ -5988,11 +6001,15 @@ MonoBehaviour:
   timer: 0
   delay: 1
   cd: {fileID: 8246138550314406494}
-  sr: {fileID: 0}
-  doors: {fileID: 0}
+  sr: {fileID: 3575298080343029927}
 --- !u!4 &2126435289153870611 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5942769339532552810, guid: 935fa28fbdeb9dc4490dcdfe797cb8c2, type: 3}
+  m_PrefabInstance: {fileID: 5763033689834697081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &3575298080343029927 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9107521110165932510, guid: 935fa28fbdeb9dc4490dcdfe797cb8c2, type: 3}
   m_PrefabInstance: {fileID: 5763033689834697081}
   m_PrefabAsset: {fileID: 0}
 --- !u!61 &8246138550314406494 stripped

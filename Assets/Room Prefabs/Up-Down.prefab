@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7939670942440095361}
   - component: {fileID: 868970865536800665}
+  - component: {fileID: 4232990878809684142}
   m_Layer: 0
   m_Name: Up-Down
   m_TagString: RoomPrefab
@@ -51,6 +52,18 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &4232990878809684142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3425507349222206928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282fba038afeeb44f9cce57d012cced5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3934243199023471673
 GameObject:
   m_ObjectHideFlags: 0
@@ -6322,11 +6335,15 @@ MonoBehaviour:
   timer: 0
   delay: 1
   cd: {fileID: 2759530832006425942}
-  sr: {fileID: 0}
-  doors: {fileID: 0}
+  sr: {fileID: 7324536693571536815}
 --- !u!4 &5312387567121933339 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5942769339532552810, guid: 935fa28fbdeb9dc4490dcdfe797cb8c2, type: 3}
+  m_PrefabInstance: {fileID: 2000039563907206769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &7324536693571536815 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9107521110165932510, guid: 935fa28fbdeb9dc4490dcdfe797cb8c2, type: 3}
   m_PrefabInstance: {fileID: 2000039563907206769}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2508676757480406087
@@ -6402,6 +6419,11 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 4434431314523956007, guid: 935fa28fbdeb9dc4490dcdfe797cb8c2, type: 3}
   m_PrefabInstance: {fileID: 2508676757480406087}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &6680234670143714713 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9107521110165932510, guid: 935fa28fbdeb9dc4490dcdfe797cb8c2, type: 3}
+  m_PrefabInstance: {fileID: 2508676757480406087}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8117853786737628717 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5942769339532552810, guid: 935fa28fbdeb9dc4490dcdfe797cb8c2, type: 3}
@@ -6428,5 +6450,4 @@ MonoBehaviour:
   timer: 0
   delay: 1
   cd: {fileID: 2259364389712060256}
-  sr: {fileID: 0}
-  doors: {fileID: 0}
+  sr: {fileID: 6680234670143714713}

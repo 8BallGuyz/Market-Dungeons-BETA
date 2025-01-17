@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 574679937021565091}
   - component: {fileID: 1612283733949621122}
+  - component: {fileID: 6252835331190420190}
   m_Layer: 0
   m_Name: Right
   m_TagString: RoomPrefab
@@ -49,6 +50,18 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &6252835331190420190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005669184552597995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282fba038afeeb44f9cce57d012cced5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4659763879570807553
 GameObject:
   m_ObjectHideFlags: 0
@@ -6676,8 +6689,7 @@ MonoBehaviour:
   timer: 0
   delay: 1
   cd: {fileID: 5600692242746970620}
-  sr: {fileID: 0}
-  doors: {fileID: 0}
+  sr: {fileID: 6297288899835324609}
 --- !u!4 &1214564939948525597 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2909342555076352502, guid: 1af22cb2963d50c43b8dcfe72bc36886, type: 3}
@@ -6686,5 +6698,10 @@ Transform:
 --- !u!61 &5600692242746970620 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 8431486345469116439, guid: 1af22cb2963d50c43b8dcfe72bc36886, type: 3}
+  m_PrefabInstance: {fileID: 4087878417213968875}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &6297288899835324609 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8061295040082196778, guid: 1af22cb2963d50c43b8dcfe72bc36886, type: 3}
   m_PrefabInstance: {fileID: 4087878417213968875}
   m_PrefabAsset: {fileID: 0}

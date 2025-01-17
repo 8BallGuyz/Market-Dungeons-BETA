@@ -26,12 +26,18 @@ public class door_script : MonoBehaviour
         {
             timer = timer + Time.deltaTime;
         }
-        if (timer >= delay)
+
+        DoorManager doorManager = GetComponentInParent<DoorManager>();
+        if (doorManager != null && timer >= delay)
         {
-            CloseDoor();
+            doorManager.CloseAllDoors();
+        }
+        else
+        {
+            Debug.LogWarning("RoomManager not found for this door!");
         }
 
-        if(isOpen == true)
+        if (isOpen == true)
         {
             doors.GetComponent<Collider2D>().enabled = false;
             cd.isTrigger = true;
@@ -56,9 +62,9 @@ public class door_script : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("player"))
+        if (collision.CompareTag("player"))
         {
-            Debug.Log("Player has passed the door !");
+            Debug.Log("Player has passed the door!");
             Timer = true;
         }
     }

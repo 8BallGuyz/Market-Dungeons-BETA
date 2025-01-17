@@ -6525,6 +6525,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5622802745078958900}
   - component: {fileID: 5096058497955827848}
+  - component: {fileID: 26369289492602373}
   m_Layer: 0
   m_Name: Down-Right
   m_TagString: RoomPrefab
@@ -6566,6 +6567,18 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &26369289492602373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8358232823485585698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282fba038afeeb44f9cce57d012cced5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4909302950284808784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6660,8 +6673,13 @@ MonoBehaviour:
   timer: 0
   delay: 1
   cd: {fileID: 8767130567336620407}
-  sr: {fileID: 0}
+  sr: {fileID: 4198818542756240270}
   doors: {fileID: 0}
+--- !u!212 &4198818542756240270 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9107521110165932510, guid: 935fa28fbdeb9dc4490dcdfe797cb8c2, type: 3}
+  m_PrefabInstance: {fileID: 4909302950284808784}
+  m_PrefabAsset: {fileID: 0}
 --- !u!61 &8767130567336620407 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 4434431314523956007, guid: 935fa28fbdeb9dc4490dcdfe797cb8c2, type: 3}
@@ -6744,6 +6762,11 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 8431486345469116439, guid: 1af22cb2963d50c43b8dcfe72bc36886, type: 3}
   m_PrefabInstance: {fileID: 5918510198823000559}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &4466933714062450885 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8061295040082196778, guid: 1af22cb2963d50c43b8dcfe72bc36886, type: 3}
+  m_PrefabInstance: {fileID: 5918510198823000559}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6935506756453674649 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3611072219874146166, guid: 1af22cb2963d50c43b8dcfe72bc36886, type: 3}
@@ -6765,7 +6788,7 @@ MonoBehaviour:
   timer: 0
   delay: 1
   cd: {fileID: 2819373779738778104}
-  sr: {fileID: 0}
+  sr: {fileID: 4466933714062450885}
   doors: {fileID: 0}
 --- !u!4 &8809825959568982041 stripped
 Transform:
